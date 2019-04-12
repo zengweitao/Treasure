@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- 下拉的颜色-->
+    <!-- A light Holo shade of orange -->
+    <color name="holo_orange_light">#ffffbb33</color>
+
+    <!--用于主要区域，界面的主色调-->
+    <color name="app_blue">#00AAFF</color>
+    <!--用于主要标题渐变颜色，下面的颜色-->
+    <color name="app_blue_gradient">#35BCFF</color>
+    <!-- 按钮按下状态下的蓝色色值-->
+    <color name="press_blue">#0093dd</color>
+    <color name="blue_00">#00abff</color>
+    <!-- 辅助标准色，主要用于金额、进度条等-->
+    <color name="money_red">#FB4342</color>
+    <!-- 提示色，如我的优惠券、投资记录人数、意见反馈等-->
+    <color name="hint_yellow">#FFAB19</color>
+    <!--会员中心橙色文案-->
+    <color name="tv_orange_fb">#ffb31f</color>
+    <!-- 提示色，如完成项、投资记录等-->
+    <!-- 用于icon辅助色彩，如更多-->
+    <color name="icon_blue">#35BCFF</color>
+    <color name="blue_00aaff">#00aaff</color>
+    <color name="progress_8bule">#6ff3ff</color>
+    <!-- icon提示色，如邀请好友等-->
+    <color name="icon_red">#DE1E7C</color>
+    <color name="icon_red2">#fb4343</color>
+    <color name="red_6729">#fe6729</color>
+
+    <!-- 用于大标题、主要文字，较多使用-->
+    <color name="tv_3">#333333</color>
+    <!-- 用于展示文字、主要栏目标题，较多使用-->
+    <color name="tv_6">#666666</color>
+    <!-- 用于默认文字、时间标签、少数使用-->
+    <color name="tv_9">#999999</color>
+    <!-- 用于提示文字，非输入状态默认提示文字，如首页底部合作伙伴-->
+    <color name="tv_a">#AAAAAA</color>
+    <!-- 用于不可点击文字，用于未输入状态提示文字以及实名认证页不可点击信息-->
+    <color name="tv_c">#CCCCCC</color>
+    <!-- 用于未输入状态的按钮底色-->
+    <color name="tv_b">#bbbbbb</color>
+    <color name="tv_ecec">#ececed</color>
+    <color name="gray_eb">#ebebeb</color>
+    <!-- 用于分割线【适用于所有间隔线1PX】-->
+    <color name="tv_eb">#EBEBEB</color>
+    <color name="tv_454653">#454653</color>
+    <color name="tv_f6f7f9">#F6F7F9</color>
+
+    <!-- 用于间隔条【（适用于所有间隔条20px）以及背景底】-->
+    <color name="tv_f5">#F5F5F5</color>
+    <color name="tv_b0">#B0B0B0</color>
+    <color name="bgcolor">#f0f0f0</color>
+    <color name="gragy_f8">#f8f8f8</color>
+    <color name="tv_d">#dddddd</color>
+    <color name="white">#FFFFFF</color>
+    <color name="tv_red2">#FB4343</color>
+    <color name="tv_no">#F5F5F5</color>
+    <!--无色-->
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="black">#000000</color>
+    <color name="line_6C6E8A">#6C6E8A</color>
+    <color name="tv_0674ff">#0076ff</color>
+    <color name="tv_007fff">#007fff</color>
+    <color name="tv_0070FF">#0070FF</color>
+    <color name="tv_00AAFF">#00AAFF</color>
+    <color name="tv_9ADDFF">#9ADDFF</color>
+    <color name="tv_EDEDED">#EDEDED</color>
+    <color name="holo_purple">#ffaa66cc</color>
+    <!-- A dark Holo shade of orange -->
+    <color name="holo_orange_dark">#ffff8800</color>
+    <!-- A really bright Holo shade of blue -->
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <!--无色-->
+    <color name="tv_null">#00000000</color>
+</resources>
