@@ -1,6 +1,8 @@
 # Treasure
 1.该框架为MVP+retrofit2+rxjava2+rxandroid+okhttp3+Lifecycle 的网络框架，结合了Google官方AAC（Android Architecture Components），实现生命周期的管理。
+
 2.同时可以应对项目多个BaseUrl的网络请求，针对对接多业务方灵活取用
+
 3.自定义拦截器，可以动态的设置请求头里的参数，对返回的code码做同一封装处理。同时对接口返回的error，做统一处理，以下是错误的统一处理：
 public class ErrorHandler {
     private static String data = "{\"Success\": false,\"StatusCode\": 500,\"Message\": \"处理失败\", \"ErrorInfo\":            {\"ErrorMessage\": \"网络请求错误\",\"ErrorCode\": \"404\" },\"Result\": null}";
