@@ -4,6 +4,7 @@ import com.jyc99.treasure.api.baseFile.BaseNetWork;
 import com.jyc99.treasure.model.LoginEntity;
 import com.jyc99.treasure.model.LunBoTuEntity;
 import com.jyc99.treasure.model.MessageEntity;
+import com.jyc99.treasure.model.TradeSimpleResult;
 import com.jyc99.treasure.model.UserRechargeWay;
 
 import java.util.HashMap;
@@ -47,6 +48,11 @@ public class UserNetWork extends BaseNetWork {
         //获取首页轮播图
         @GET("api/AppPubilc/get_lunbotu")
         Observable<LunBoTuEntity> toGetLunBoTuEntity2();
+
+        //刷新token
+        @FormUrlEncoded
+        @POST("directlink/user/active/record")
+        Observable<TradeSimpleResult> getUserRecordEntity(@FieldMap HashMap<String, Object> paramMap);
     }
 
     //登录
@@ -72,5 +78,10 @@ public class UserNetWork extends BaseNetWork {
     //首页轮播图
     public void toGetLunBoTuEntity2(Observer<LunBoTuEntity> observer) {
         setSubscribe(service2.toGetLunBoTuEntity2(), observer);
+    }
+
+    //刷新token
+    public void getUserRecordEntity(HashMap<String, Object> paramMap,Observer<TradeSimpleResult> observer) {
+        setSubscribe(service.getUserRecordEntity(paramMap), observer);
     }
 }

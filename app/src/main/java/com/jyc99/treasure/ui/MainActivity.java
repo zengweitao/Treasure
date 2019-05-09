@@ -58,8 +58,6 @@ public class MainActivity extends LifecycleBaseActivity<TestContact.presenter> i
      */
     @Override
     public void setData(LunBoTuEntity lunBoTuEntity, String tag) {
-//        list.addAll(dataList);
-//        adapter.notifyDataSetChanged();
         if ("LunBoTu".equals(tag)) {
             String imageUrl = lunBoTuEntity.getResult().getList().get(0).getImageUrl();
             System.out.println("图片地址:" + imageUrl);

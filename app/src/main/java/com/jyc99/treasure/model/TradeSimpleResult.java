@@ -20,6 +20,15 @@ public class TradeSimpleResult implements Serializable{
   private int StatusCode;
   private String Message;
   private ErrorInfoBean ErrorInfo;
+  private String userToken;
+
+  public String getUserToken() {
+    return userToken;
+  }
+
+  public void setUserToken(String userToken) {
+    this.userToken = userToken;
+  }
 
   public boolean isSuccess() {
     return Success;

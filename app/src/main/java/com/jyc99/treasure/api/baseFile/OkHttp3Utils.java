@@ -17,6 +17,7 @@ import com.jyc99.treasure.AppConfig;
 import com.jyc99.treasure.AppManager;
 import com.jyc99.treasure.MyApplication;
 import com.jyc99.treasure.R;
+import com.jyc99.treasure.utils.NetWorkUtils;
 import com.jyc99.treasure.utils.PreferenceHelper;
 import com.jyc99.treasure.view.DialogView;
 
@@ -51,7 +52,14 @@ public class OkHttp3Utils {
                 if (activity != null && !activity.isDestroyed()) {
                     try {
                         PreferenceHelper.write(PreferenceHelper.DEFAULT_FILE_NAME, AppConfig.PREFER_TOKEN_TAG, "");
-                        DialogView dialogView = new DialogView(activity, 180, 180, R.layout.my_dialog, R.style.dialog) {
+                        /**
+                         * TODO 有小伙伴想接口报401的时候自动刷新token，并且从新请求上一次的网络请求
+                         * TODO 我这里实现这个业务需要，以上只是弹出一个对话框跳到登录页面，让用户再次登录
+                         */
+                        NetWorkUtils.tokens(activity,"");
+
+                        /*********************************************以前的代码*************************************/
+                        /*DialogView dialogView = new DialogView(activity, 180, 180, R.layout.my_dialog, R.style.dialog) {
                             @Override
                             public void isdismiss(int tag) {
                                 if (tag == DialogView.CANCEL_BUTTON_CLICK) {
@@ -59,7 +67,8 @@ public class OkHttp3Utils {
                                 }
                             }
                         };
-                        dialogView.showdialog2("温馨提示", "登录失效，请重新登录", "去登录", "");
+                        dialogView.showdialog2("温馨提示", "登录失效，请重新登录", "去登录", "");*/
+                        /*****************************************************************************************/
                     } catch (Exception es) {
                         es.printStackTrace();
                     }
@@ -96,7 +105,7 @@ public class OkHttp3Utils {
                     .writeTimeout(30, TimeUnit.SECONDS)
                     .readTimeout(30, TimeUnit.SECONDS)
 //                    .cache(cache)//设置缓存
-                    .retryOnConnectionFailure(true)//自动重试
+                    .retryOnConnectionFailure(true)//自动重试(TODO 要是想重新请求上一个接口，这里设置成true)
                     .build();
         }
         return mOkHttpClient;
@@ -133,7 +142,7 @@ public class OkHttp3Utils {
 
             Response response = chain.proceed(build);
             int code = response.code();
-            //对个别链接地址做处理
+            //对个别链接地址做处理（比如要对个别网络请求做特殊的拦截处理）
             HttpUrl url = response.request().url();
             System.out.println("我的网址"+url);
             updateHandler.sendEmptyMessage(code);

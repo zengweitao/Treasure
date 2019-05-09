@@ -74,6 +74,4 @@ public class ErrorHandler {
             return false;
         }
     }
-
-
 }
