@@ -2,6 +2,7 @@
 5.9号新增
     添加token过期自动刷新token，刷新后再请求一次接口的功能;
 /****************************************************************/
+
 1.该框架为MVP+retrofit2+rxjava2+rxandroid+okhttp3+Lifecycle 的网络框架，结合了Google官方AAC（Android Architecture Components），实现生命周期的管理。
 
 2.同时可以应对项目多个BaseUrl的网络请求，针对对接多业务方灵活取用
